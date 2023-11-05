@@ -2,9 +2,7 @@ import {FunctionComponent} from 'react'
 import { useContext} from 'react'
 import ThemeContext from './ThemeContext.tsx'
 
-type theme = {
-    children: React.ReactNode
-}
+
 interface BoxProps {
 }
 
@@ -13,7 +11,7 @@ const Box: FunctionComponent<BoxProps> = () => {
     const theme = useContext(ThemeContext)
     return (
         <>
-            <div style={{backgroundColor: theme.primary.main}}>
+            <div >
                 <p>enige inhoud</p>
             </div>
 
