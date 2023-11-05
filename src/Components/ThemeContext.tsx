@@ -7,13 +7,15 @@ type ThemeContext = {
 }
 interface ThemeContextProps {}
 
-const ThemeContext: FunctionComponent<ThemeContextProps> = () => {
-    const ThemaContext = createContext(theme)
+export const ThemeContext = createContext(theme)
+
+const ThemeContextProvider: FunctionComponent<ThemeContextProps> = () => {
+
     return (
         <>
-            <ThemaContext.Provider value={theme} {...Children}></ThemaContext.Provider>
+            <ThemeContext.Provider value={theme} {...Children}></ThemeContext.Provider>
         </>
     )
 }
 
-export default ThemeContext
+export default ThemeContextProvider
